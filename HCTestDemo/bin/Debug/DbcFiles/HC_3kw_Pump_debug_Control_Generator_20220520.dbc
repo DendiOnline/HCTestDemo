@@ -1,0 +1,773 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Engine BMS GearBox MCU VCU PC
+VAL_TABLE_ GearModeCmd_Table 4 "D" 3 "N" 2 "R" 1 "P" 0 "未使用" ;
+VAL_TABLE_ EPT_Mode_Table 6 "测试模式" 5 "转矩模式" 4 "转速模式" 3 "加力" 2 "发电" 1 "启动" 0 "停机" ;
+VAL_TABLE_ TargetGear_Table 1 "前进" 0 "空档" -1 "后退" ;
+VAL_TABLE_ Gear_Shift_Sta_Table 3 "不可用" 2 "故障" 1 "换挡过程中" 0 "不在换挡过程中" ;
+VAL_TABLE_ ETC_Lock_Sta_Table 3 "不可用" 2 "故障" 1 "变矩器闭锁" 0 "变矩器未闭锁" ;
+VAL_TABLE_ GenoMainRelayEnable_Table 1 "闭合" 0 "断开" ;
+VAL_TABLE_ MotorDir_Table 1 "反转" 0 "正转" ;
+VAL_TABLE_ MotorEnable_Table 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_TABLE_ Fault_Status_1_Table 2 "二级故障-报警" 1 "一级故障-停机" 0 "无故障" ;
+VAL_TABLE_ CAN_Status_1_Table 1 "CAN通讯丢失" 0 "CAN通讯正常" ;
+VAL_TABLE_ Self_Check_1_Table 1 "低压自检完成" 0 "自检未成功" ;
+VAL_TABLE_ Discharge_Enable_Table 1 "主动放电" 0 "不放电" ;
+VAL_TABLE_ VMS_StandingSlopeV_Table 1 "驻坡使能" 0 "驻坡禁止" ;
+VAL_TABLE_ VMS_DisCharge_Table 1 "主动放电使能" 0 "主动放电禁止" ;
+VAL_TABLE_ ERR_Value_Table 2 "二级故障" 1 "一级故障" 0 "无故障" ;
+VAL_TABLE_ EngineTorqueIncreaseActive 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ ABSActive1 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ VehicleSpeedStatus 1 "Invalid" 0 "Valid" ;
+VAL_TABLE_ BrakeInterventionActive 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ ESPFault1 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ ESPLampInformation 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ Pala 1 "ON" 0 "OFF" ;
+VAL_TABLE_ KeyStatus 7 "nvalid" 3 "Crank" 2 "IGN" 1 "ACC" 0 "Off" ;
+VAL_TABLE_ Parameter_Operate_cmd 21845 "从CAN总线接受参数，并存入EEPROM" 2 "恢复默认参数" 1 "从EEPROM中恢复参数" ;
+VAL_TABLE_ Current_Sensor_cmd 2 "自动调整零点" 1 "手动设置参数" 0 "忽略" ;
+VAL_TABLE_ Test_Mode 5 "自动吸零" 4 "Ua、Ub、Uc模式" 3 "id、iq模式" 2 "Ud、Uq模式" 1 "Ualfa、Ubeta模式" 0 "普通模式" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ SelfCountOil_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTorqueFbOil : 0|16@1- (1,-10000) [-8000|8000] "" Vector__XXX
+ SG_ ModeFbOil : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ IGBTTempW_Oil1 : 0|8@1+ (1,-15) [-15|240] "℃" Vector__XXX
+ SG_ IGBTTempV_Oil1 : 0|8@1+ (1,-15) [-15|240] "℃" Vector__XXX
+ SG_ SelfCountOil_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusVoltOil : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ SelfCountGene_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM6_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM5_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM4_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM3_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM2_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilMotorDischarge : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilMotorTrqCmd : 0|16@1+ (1,-10000) [-8000|8000] "" Vector__XXX
+ SG_ SelfCountM1_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilMotorDir : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilMotorEnable : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilMotorSpdCmd : 0|16@1+ (1,-5000) [-5000|5000] "" Vector__XXX
+ SG_ ModeFbGene : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountGene_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SelfCountM6_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModeFbM6 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountM5_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModeFbM5 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountM4_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModeFbM4 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ ModeFbM3 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountM3_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModeFbM2 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountM2_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModeFbM1 : 0|8@1+ (1,0) [0|255] "℃" Vector__XXX
+ SG_ SelfCountM1_2 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTorqueFbM3 : 0|16@1- (1,-2000) [-2000|30767] "" Vector__XXX
+ SG_ MotorPhaseCurM3 : 0|16@1+ (0.1,-2000) [-2000|4553.5] "A" Vector__XXX
+ SG_ MotorSpdFbM3 : 0|16@1+ (0.5,-10000) [-10000|10000] "" Vector__XXX
+ SG_ BusVolt3 : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MotorTorqueFbM2 : 0|16@1- (1,-2000) [-2000|30767] "" Vector__XXX
+ SG_ MotorTorqueFbM1 : 0|16@1+ (1,-2000) [-2000|63535] "" Vector__XXX
+ SG_ PWMFrequency : 0|8@1+ (1,0) [0|0] "KHz" Vector__XXX
+ SG_ DrivePowerLimit : 0|8@1+ (1,0) [0|0] "Kw" Vector__XXX
+ SG_ GeneratePowerLimit : 0|8@1+ (1,0) [0|0] "Kw" Vector__XXX
+ SG_ DecoupleCoef : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DeadTime : 0|8@1+ (1,0) [0|0] "us" Vector__XXX
+ SG_ DeadCompensateSelect : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParameterApplyCmd : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PhaseCurrentSetCmd : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ WphaseCurrentOffset : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VphaseCurrentOffset : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UphaseCurrentOffset : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ResolverInitialPosition : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusCurrentOffset : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxMotorTemp : 0|8@1+ (1,0) [0|0] "℃" Vector__XXX
+ SG_ MaxIgbtTemp : 0|8@1+ (1,0) [0|0] "℃" Vector__XXX
+ SG_ PredictResolverPosition : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FWVoltageMargin : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ FWPIKiVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxCurrent : 0|16@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ MaxTorque : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpdPIKpVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpdPIKiVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpdPIKcVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IqPIKpVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IqPIKiVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IdPIKpVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IdPIKiVal : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DeadCompensateSelect_M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PWMFrequency_M : 0|8@1+ (1,0) [0|0] "KHz" Vector__XXX
+ SG_ DrivePowerLimit_M : 0|8@1+ (1,0) [0|0] "Kw" Vector__XXX
+ SG_ GeneratePowerLimit_M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DecoupleCoef_M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DeadTime_M : 0|8@1+ (1,0) [0|0] "us" Vector__XXX
+ SG_ WphaseCurrentOffset_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VphaseCurrentOffset_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UphaseCurrentOffset_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusCurrentOffset_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PredictResolverPosition_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ResolverInitialPosition_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxMotorTemp_M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxIgbtTemp_M : 0|8@1+ (1,0) [0|0] "℃" Vector__XXX
+ SG_ MaxCurrent_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FWVoltageMargin_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FWPIKiVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxTorque_M : 0|16@1+ (1,0) [0|0] "Nm" Vector__XXX
+ SG_ SpdPIKpVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpdPIKiVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SpdPIKcVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IqPIKpVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IqPIKiVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IdPIKpVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IdPIKiVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusVoltageMinVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusVoltageMaxVal_M : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorModeOil90 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil10 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil9 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd10 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorSpdCmd9 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorDischarge10 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode10 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDischarge9 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode9 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorModeOil78 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil8 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil7 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd8 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorSpdCmd7 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorDischarge8 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode8 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDischarge7 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode7 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir8 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable8 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir7 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable7 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorModeOil56 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil5 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd6 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorSpdCmd5 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorDischarge6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode6 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDischarge5 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode5 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir5 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable5 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorTrqCmd6 : 0|16@1+ (1,-10000) [-10000|55535] "" Vector__XXX
+ SG_ MotorModeOil34 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd4 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorSpdCmd3 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorDischarge4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode4 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDischarge3 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode3 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable4 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorModeOil12 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnableOil1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd2 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorSpdCmd1 : 0|8@1+ (12,0) [0|3060] "" Vector__XXX
+ SG_ MotorDischarge2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorDir1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable2 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorEnable1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorMode2 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550534388 pwr_SDC_RSD: 8 Vector__XXX
+ SG_ READ_R : 48|16@1+ (0.1,0) [0|2000] "Ω" Vector__XXX
+ SG_ READ_P : 32|16@1+ (0.1,0) [0|800] "KW" Vector__XXX
+ SG_ READ_I : 16|16@1+ (0.1,0) [0|1000] "A" Vector__XXX
+ SG_ READ_V : 0|16@1+ (0.1,0) [0|2000] "V" Vector__XXX
+
+BO_ 2550337780 pwr_SDC_OST: 8 Vector__XXX
+ SG_ Data_R : 48|16@1+ (0.1,0) [0|2500] "" Vector__XXX
+ SG_ Data_P : 32|16@1+ (0.01,-320) [-320|335.35] "" Vector__XXX
+ SG_ Data_I : 16|16@1+ (0.01,-320) [-320|335.35] "" Vector__XXX
+ SG_ Data_V : 0|16@1+ (0.1,0) [0|2000] "V" Vector__XXX
+
+BO_ 2551444496 Pwr_para: 8 Vector__XXX
+ SG_ SET_R : 48|16@1+ (0.1,0) [0|2000] "Ω" Vector__XXX
+ SG_ SET_P : 32|16@1+ (0.1,0) [0|800] "KW" Vector__XXX
+ SG_ SET_I : 16|16@1+ (0.1,0) [0|2000] "A" Vector__XXX
+ SG_ SET_V : 0|16@1+ (0.1,0) [0|2000] "V" Vector__XXX
+
+BO_ 2551903248 Pwr_Mode: 8 Vector__XXX
+ SG_ CTRL_CM : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTRL_Local : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTRL_RUN : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CTRL_WM : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 279 MCU_Debug_Info6: 8 MCU
+ SG_ Ub : 16|16@1- (0.03125,0) [0|0] "" Vector__XXX
+ SG_ Ua : 0|16@1- (0.03125,0) [0|0] "" Vector__XXX
+ SG_ Trq_Cmd_FOC : 32|16@1- (1,0) [0|0] "Nm"  VCU
+ SG_ Speed_Cmd_CAN : 48|16@1- (1,0) [0|0] "rad/s"  VCU
+
+BO_ 278 MCU_Debug_Info5: 8 MCU
+ SG_ WPhaseCurrent : 32|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ VPhaseCurrent : 16|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ UPhaseCurrent : 0|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ RotorRTPosition : 48|16@1+ (1,0) [0|0] ""  VCU
+
+BO_ 277 MCU_Debug_Info4: 8 MCU
+ SG_ FWSpeedList : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Motor_Warning : 32|16@1+ (1,0) [0|0] ""  VCU
+ SG_ Motor_Fault : 0|32@1+ (1,0) [0|0] ""  VCU
+
+BO_ 276 MCU_Debug_Info3: 8 MCU
+ SG_ KL15Vol : 56|8@1+ (0.1,0) [0|0] "" Vector__XXX
+ SG_ KL30Vol : 8|8@1+ (0.1,0) [0|0] "V"  VCU
+ SG_ Torque_Max : 32|16@1+ (1,0) [0|0] "Nm"  VCU
+ SG_ Power_Max : 48|8@1+ (1,0) [0|0] "kw"  VCU
+ SG_ Initial_Position : 16|16@1+ (1,0) [0|0] ""  VCU
+ SG_ IGBTTemp : 0|8@1+ (1,-40) [-40|215] "℃"  VCU
+
+BO_ 275 MCU_Debug_Info2: 8 MCU
+ SG_ QAxisFbkCurrent : 48|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ QAxisCmdCurrent : 16|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ DAxisFbkCurrent : 32|16@1- (0.03125,0) [0|0] "A"  VCU
+ SG_ DAxisCmdCurrent : 0|16@1- (0.03125,0) [0|0] "A"  VCU
+
+BO_ 274 MCU_Debug_Info1: 8 MCU
+ SG_ QAxisCmdVol : 16|16@1- (0.03125,0) [0|0] "V"  VCU
+ SG_ TorqueFb : 48|16@1+ (0.1,-3000) [-3000|3000] "V"  VCU
+ SG_ DAxisCmdVol : 0|16@1- (0.03125,0) [0|0] "V"  VCU
+ SG_ SpeedFb : 32|16@1+ (1,-10000) [0|0] "V"  VCU
+
+BO_ 285 MCU_Debug_Info7: 8 MCU
+ SG_ BusCurrent : 48|16@1- (0.1,0) [0|0] "" Vector__XXX
+ SG_ MotorTemp : 0|8@1+ (1,-50) [-50|205] "" Vector__XXX
+ SG_ ADC_BusVoltage : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BusVoltage : 16|16@1+ (0.1,0) [0|0] ""  PC
+
+BO_ 287 PC_TestCmd: 8 PC
+ SG_ TrqVelSwitch : 12|1@1+ (1,0) [0|1] ""  MCU
+ SG_ VelocitySet : 48|16@1+ (1,-10000) [-9500|9500] ""  MCU
+ SG_ CtrlCanDebugInfoCmd : 11|1@1+ (1,0) [0|0] ""  MCU
+ SG_ Parameter_feedback : 10|1@1+ (1,0) [0|0] ""  MCU
+ SG_ Capa_Discharge : 9|1@1+ (1,0) [0|0] ""  MCU
+ SG_ TMFailureRecovery : 8|1@1+ (1,0) [0|0] ""  MCU
+ SG_ TestParameters2 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ TestParameters1 : 16|16@1- (1,0) [0|0] ""  MCU
+ SG_ TestMode : 0|8@1+ (1,0) [0|0] ""  MCU
+
+BO_ 286 PC_Parameter: 8 PC
+ SG_ PC_MCU_SavePosition : 48|8@1+ (1,0) [0|0] ""  MCU
+ SG_ PC_MCU_ReadWriteFlag : 40|8@1+ (1,0) [0|0] "V"  MCU
+ SG_ PC_MCU_ParamValue : 8|32@1+ (1,0) [0|0] "V"  MCU
+ SG_ PC_MCU_ParamIndex : 0|8@1+ (1,0) [0|0] ""  MCU
+
+BO_ 284 MCU_Parameters: 8 MCU
+ SG_ MCU_ParamValue : 8|32@1+ (1,0) [0|0] ""  PC
+ SG_ MCU_ParamIndex : 0|8@1+ (1,0) [0|0] ""  PC
+
+BO_ 283 MCU_Nm: 8 MCU
+ SG_ NmData : 0|64@1+ (1,0) [0|0] ""  PC
+
+BO_ 1993 MCU_DiagResp: 8 MCU
+ SG_ DiagRespData : 0|64@1+ (1,0) [0|0] ""  PC
+
+BO_ 2015 MCU_DiagReqFun: 8 PC
+ SG_ DiagReqData : 0|64@1+ (1,0) [0|0] ""  MCU
+
+BO_ 1865 MCU_DiagReqPhy: 8 PC
+ SG_ DiagReq_Data : 0|64@1+ (1,0) [0|0] ""  MCU
+
+BO_ 273 MCU_CcpResp: 8 MCU
+ SG_ CcpRespData : 0|64@1+ (1,0) [0|0] ""  PC
+
+BO_ 272 MCU_CcpReq: 8 PC
+ SG_ CcpReqData : 0|64@1+ (1,0) [0|0] ""  MCU
+
+BO_ 1383 Tx_MCU_7: 8 MCU
+ SG_ data8_m7 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m7 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m7 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m7 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m7 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m7 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m7 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m7 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1127 Rx_MCU_7: 8 VCU
+ SG_ data8_m7 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m7 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m7 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m7 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m7 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m7 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m7 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m7 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1382 Tx_MCU_6: 8 MCU
+ SG_ data8_m6 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m6 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m6 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m6 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m6 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m6 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m6 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m6 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1126 Rx_MCU_6: 8 VCU
+ SG_ data8_m6 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m6 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m6 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m6 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m6 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m6 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m6 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m6 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1381 Tx_MCU_5: 8 MCU
+ SG_ data8_m5 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m5 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m5 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m5 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m5 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m5 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m5 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m5 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1125 Rx_MCU_5: 8 VCU
+ SG_ data8_m5 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m5 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m5 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m5 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m5 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m5 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m5 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m5 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1380 Tx_MCU_4: 8 MCU
+ SG_ data8_m4 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m4 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m4 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m4 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m4 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m4 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m4 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m4 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1124 Rx_MCU_4: 8 VCU
+ SG_ data8_m4 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m4 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m4 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m4 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m4 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m4 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m4 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m4 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1379 Tx_MCU_3: 8 MCU
+ SG_ data8_m3 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m3 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m3 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m3 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m3 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m3 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m3 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m3 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1123 Rx_MCU_3: 8 VCU
+ SG_ data8_m3 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m3 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m3 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m3 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m3 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m3 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m3 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m3 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1378 Tx_MCU_2: 8 MCU
+ SG_ data8_m2 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m2 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m2 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m2 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m2 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m2 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m2 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m2 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1122 Rx_MCU_2: 8 VCU
+ SG_ data8_m2 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m2 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m2 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m2 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m2 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m2 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m2 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m2 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 1377 Tx_MCU_1: 8 MCU
+ SG_ data8_m1 : 56|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data7_m1 : 48|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data6_m1 : 40|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data5_m1 : 32|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data4_m1 : 24|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data3_m1 : 16|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data2_m1 : 8|8@1+ (1,0) [0|255] ""  VCU
+ SG_ data1_m1 : 0|8@1+ (1,0) [0|255] ""  VCU
+
+BO_ 1121 Rx_MCU_1: 8 VCU
+ SG_ data8_m1 : 56|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data7_m1 : 48|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data6_m1 : 40|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data5_m1 : 32|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data4_m1 : 24|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data3_m1 : 16|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data2_m1 : 8|8@1+ (1,0) [0|255] ""  MCU
+ SG_ data1_m1 : 0|8@1+ (1,0) [0|255] ""  MCU
+
+BO_ 2362461768 VCU_MCU: 8 VCU
+ SG_ MotorNumber : 40|4@1+ (1,0) [0|15] ""  MCU
+ SG_ MotorDischarge : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorSpdCmd : 24|16@1+ (1,-5000) [-5000|6000] "" Vector__XXX
+ SG_ GearModeCmd : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MotorEnableHV : 3|1@1+ (1,0) [0|0] ""  MCU
+ SG_ MotorTrqCmd : 8|16@1+ (0.1,-800) [-800|5753.5] "" Vector__XXX
+ SG_ EPT_Mode : 5|3@1+ (1,0) [0|7] ""  MCU
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "NoSigSendType","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","Cyclic","IfActive","IfActiveWithRepetition";
+BA_DEF_ BO_  "CcpMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 65535;
+BA_DEF_ BO_  "ILRxTimeout" INT 0 65535;
+BA_DEF_ BU_  "BitOrder" ENUM  "LSB","MSB";
+BA_DEF_ BO_  "DiagReqFun" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagReqPhy" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResp" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "ILTxTimeout" INT 0 65535;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "NoMsgSendType","Cyclic","vector_leerstring";
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 65535;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_REL_ BU_SG_REL_  "GenSigTimeoutTime" INT 0 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "CcpMessage" "No";
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "ILRxTimeout" 0;
+BA_DEF_DEF_  "BitOrder" "LSB";
+BA_DEF_DEF_  "DiagReqFun" "No";
+BA_DEF_DEF_  "DiagReqPhy" "No";
+BA_DEF_DEF_  "DiagResp" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "ILTxTimeout" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgILSupport" "No";
+BA_DEF_DEF_  "ILUsed" "No";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_REL_ "GenSigTimeoutTime" 0;
+BA_ "BusType" "CAN";
+BA_ "DBName" "FanController_Control_20160919";
+BA_ "NmStationAddress" BU_ MCU 1;
+BA_ "ILUsed" BU_ MCU 1;
+BA_ "GenMsgILSupport" BO_ 279 1;
+BA_ "GenMsgCycleTime" BO_ 279 100;
+BA_ "GenMsgStartDelayTime" BO_ 279 50;
+BA_ "ILTxTimeout" BO_ 279 1000;
+BA_ "GenMsgSendType" BO_ 279 0;
+BA_ "GenMsgILSupport" BO_ 278 1;
+BA_ "GenMsgCycleTime" BO_ 278 100;
+BA_ "GenMsgStartDelayTime" BO_ 278 40;
+BA_ "ILTxTimeout" BO_ 278 1000;
+BA_ "GenMsgSendType" BO_ 278 0;
+BA_ "GenMsgILSupport" BO_ 277 1;
+BA_ "GenMsgCycleTime" BO_ 277 100;
+BA_ "GenMsgStartDelayTime" BO_ 277 30;
+BA_ "ILTxTimeout" BO_ 277 1000;
+BA_ "GenMsgSendType" BO_ 277 0;
+BA_ "GenMsgILSupport" BO_ 276 1;
+BA_ "GenMsgCycleTime" BO_ 276 100;
+BA_ "GenMsgStartDelayTime" BO_ 276 20;
+BA_ "ILTxTimeout" BO_ 276 1000;
+BA_ "GenMsgSendType" BO_ 276 0;
+BA_ "GenMsgILSupport" BO_ 275 1;
+BA_ "GenMsgCycleTime" BO_ 275 100;
+BA_ "GenMsgStartDelayTime" BO_ 275 10;
+BA_ "ILTxTimeout" BO_ 275 1000;
+BA_ "GenMsgSendType" BO_ 275 0;
+BA_ "GenMsgILSupport" BO_ 274 1;
+BA_ "GenMsgCycleTime" BO_ 274 100;
+BA_ "ILTxTimeout" BO_ 274 1000;
+BA_ "GenMsgSendType" BO_ 274 0;
+BA_ "ILTxTimeout" BO_ 285 1000;
+BA_ "GenMsgILSupport" BO_ 285 1;
+BA_ "GenMsgCycleTime" BO_ 285 100;
+BA_ "GenMsgSendType" BO_ 285 0;
+BA_ "GenMsgCycleTime" BO_ 287 200;
+BA_ "GenMsgILSupport" BO_ 287 1;
+BA_ "GenMsgILSupport" BO_ 286 1;
+BA_ "GenMsgSendType" BO_ 286 0;
+BA_ "GenMsgILSupport" BO_ 284 1;
+BA_ "GenMsgSendType" BO_ 284 0;
+BA_ "NmMessage" BO_ 283 1;
+BA_ "ILTxTimeout" BO_ 283 100;
+BA_ "GenMsgCycleTime" BO_ 283 1000;
+BA_ "DiagResp" BO_ 1993 1;
+BA_ "ILTxTimeout" BO_ 1993 100;
+BA_ "GenMsgCycleTime" BO_ 1993 20;
+BA_ "GenMsgSendType" BO_ 1993 0;
+BA_ "GenMsgCycleTime" BO_ 2015 20;
+BA_ "DiagReqFun" BO_ 2015 1;
+BA_ "GenMsgSendType" BO_ 2015 0;
+BA_ "GenMsgCycleTime" BO_ 1865 20;
+BA_ "DiagReqPhy" BO_ 1865 1;
+BA_ "GenMsgSendType" BO_ 1865 0;
+BA_ "ILTxTimeout" BO_ 273 20;
+BA_ "GenMsgCycleTime" BO_ 273 100;
+BA_ "CcpMessage" BO_ 273 1;
+BA_ "GenMsgSendType" BO_ 273 0;
+BA_ "GenMsgCycleTime" BO_ 272 100;
+BA_ "CcpMessage" BO_ 272 1;
+BA_ "GenMsgSendType" BO_ 272 0;
+BA_ "ILTxTimeout" BO_ 1383 60;
+BA_ "GenMsgCycleTime" BO_ 1383 100;
+BA_ "GenMsgSendType" BO_ 1383 0;
+BA_ "GenMsgILSupport" BO_ 1383 1;
+BA_ "GenMsgCycleTime" BO_ 1127 10;
+BA_ "GenMsgSendType" BO_ 1127 0;
+BA_ "GenMsgILSupport" BO_ 1127 1;
+BA_ "ILTxTimeout" BO_ 1382 50;
+BA_ "GenMsgCycleTime" BO_ 1382 100;
+BA_ "GenMsgSendType" BO_ 1382 0;
+BA_ "GenMsgILSupport" BO_ 1382 1;
+BA_ "GenMsgCycleTime" BO_ 1126 10;
+BA_ "GenMsgSendType" BO_ 1126 0;
+BA_ "GenMsgILSupport" BO_ 1126 1;
+BA_ "ILTxTimeout" BO_ 1381 40;
+BA_ "GenMsgCycleTime" BO_ 1381 100;
+BA_ "GenMsgSendType" BO_ 1381 0;
+BA_ "GenMsgILSupport" BO_ 1381 1;
+BA_ "GenMsgCycleTime" BO_ 1125 10;
+BA_ "GenMsgSendType" BO_ 1125 0;
+BA_ "GenMsgILSupport" BO_ 1125 1;
+BA_ "ILTxTimeout" BO_ 1380 30;
+BA_ "GenMsgCycleTime" BO_ 1380 100;
+BA_ "GenMsgSendType" BO_ 1380 0;
+BA_ "GenMsgILSupport" BO_ 1380 1;
+BA_ "GenMsgCycleTime" BO_ 1124 10;
+BA_ "GenMsgSendType" BO_ 1124 0;
+BA_ "GenMsgILSupport" BO_ 1124 1;
+BA_ "GenMsgStartDelayTime" BO_ 1379 100;
+BA_ "ILTxTimeout" BO_ 1379 20;
+BA_ "GenMsgCycleTime" BO_ 1379 100;
+BA_ "GenMsgSendType" BO_ 1379 0;
+BA_ "GenMsgILSupport" BO_ 1379 1;
+BA_ "GenMsgCycleTime" BO_ 1123 10;
+BA_ "GenMsgSendType" BO_ 1123 0;
+BA_ "GenMsgILSupport" BO_ 1123 1;
+BA_ "GenMsgStartDelayTime" BO_ 1378 100;
+BA_ "ILTxTimeout" BO_ 1378 20;
+BA_ "GenMsgSendType" BO_ 1378 0;
+BA_ "GenMsgCycleTime" BO_ 1378 100;
+BA_ "GenMsgILSupport" BO_ 1378 1;
+BA_ "GenMsgCycleTime" BO_ 1122 10;
+BA_ "GenMsgSendType" BO_ 1122 0;
+BA_ "GenMsgILSupport" BO_ 1122 1;
+BA_ "GenMsgSendType" BO_ 1377 0;
+BA_ "ILTxTimeout" BO_ 1377 10;
+BA_ "GenMsgILSupport" BO_ 1377 1;
+BA_ "GenMsgCycleTime" BO_ 1377 100;
+BA_ "GenMsgCycleTime" BO_ 1121 10;
+BA_ "GenMsgSendType" BO_ 1121 0;
+BA_ "GenMsgILSupport" BO_ 1121 1;
+BA_ "GenMsgCycleTime" BO_ 2362461768 100;
+BA_ "GenMsgILSupport" BO_ 2362461768 1;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorTorqueFbOil 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbOil 0;
+BA_ "GenSigStartValue" SG_ 3221225472 IGBTTempW_Oil1 15;
+BA_ "GenSigStartValue" SG_ 3221225472 IGBTTempV_Oil1 15;
+BA_ "GenSigStartValue" SG_ 3221225472 OilMotorTrqCmd 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 OilMotorSpdCmd 5000;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbGene 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM6 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM5 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM4 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM3 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 ModeFbM1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorTorqueFbM3 2000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorPhaseCurM3 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdFbM3 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorTorqueFbM2 2000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorTorqueFbM1 2000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd6 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd5 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorTrqCmd6 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd4 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd3 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorSpdCmd1 0;
+BA_ "GenSigStartValue" SG_ 2550337780 Data_P 32000;
+BA_ "GenSigStartValue" SG_ 2550337780 Data_I 32000;
+BA_ "GenSigStartValue" SG_ 276 IGBTTemp 40;
+BA_ "GenSigSendType" SG_ 275 DAxisFbkCurrent 5;
+BA_ "GenSigSendType" SG_ 275 DAxisCmdCurrent 5;
+BA_ "GenSigSendType" SG_ 274 QAxisCmdVol 5;
+BA_ "GenSigStartValue" SG_ 274 TorqueFb 30000;
+BA_ "GenSigSendType" SG_ 274 TorqueFb 5;
+BA_ "GenSigSendType" SG_ 274 DAxisCmdVol 5;
+BA_ "GenSigStartValue" SG_ 274 SpeedFb 10000;
+BA_ "GenSigSendType" SG_ 274 SpeedFb 5;
+BA_ "GenSigStartValue" SG_ 285 MotorTemp 50;
+BA_ "GenSigStartValue" SG_ 287 VelocitySet 10000;
+BA_ "GenSigSendType" SG_ 1993 DiagRespData 0;
+BA_ "GenSigSendType" SG_ 2015 DiagReqData 0;
+BA_ "GenSigSendType" SG_ 1865 DiagReq_Data 0;
+BA_ "GenSigSendType" SG_ 273 CcpRespData 0;
+BA_ "GenSigSendType" SG_ 272 CcpReqData 0;
+BA_ "GenSigStartValue" SG_ 1378 data5_m2 0;
+BA_ "GenSigStartValue" SG_ 1378 data4_m2 0;
+BA_ "GenSigStartValue" SG_ 1378 data3_m2 0;
+BA_ "GenSigStartValue" SG_ 1378 data2_m2 0;
+BA_ "GenSigStartValue" SG_ 1378 data1_m2 0;
+BA_ "GenSigStartValue" SG_ 1377 data6_m1 0;
+BA_ "GenSigStartValue" SG_ 1377 data3_m1 0;
+BA_ "GenSigStartValue" SG_ 1377 data2_m1 0;
+BA_ "GenSigStartValue" SG_ 2362461768 MotorSpdCmd 5000;
+BA_ "GenSigStartValue" SG_ 2362461768 MotorTrqCmd 0;
+BA_ "GenSigStartValue" SG_ 2362461768 EPT_Mode 0;
+VAL_ 3221225472 ModeFbOil 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 OilMotorDischarge 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 OilMotorDir 1 "反转" 0 "正转" ;
+VAL_ 3221225472 OilMotorEnable 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 ModeFbGene 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM6 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM5 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM4 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM3 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM2 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ModeFbM1 3 "测试模式" 2 "转矩模式" 1 "转速模式" 0 "停机模式" ;
+VAL_ 3221225472 ParameterApplyCmd 21845 "从CAN总线接受参数，并存入EEPROM" 2 "恢复默认参数" 1 "从EEPROM中恢复参数" ;
+VAL_ 3221225472 PhaseCurrentSetCmd 2 "自动调整零点" 1 "手动设置参数" 0 "忽略" ;
+VAL_ 3221225472 MotorModeOil90 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorEnableOil10 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnableOil9 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDischarge10 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode10 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDischarge9 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode9 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorModeOil78 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorEnableOil8 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnableOil7 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDischarge8 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode8 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDischarge7 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode7 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDir8 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable8 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDir7 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable7 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorModeOil56 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorEnableOil6 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnableOil5 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDischarge6 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode6 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDischarge5 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode5 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDir6 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable6 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDir5 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable5 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorModeOil34 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorEnableOil4 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnableOil3 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDischarge4 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode4 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDischarge3 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorMode3 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorDir4 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable4 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorModeOil12 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 3221225472 MotorEnableOil2 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnableOil1 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorDischarge2 1 "主动放电" 0 "不放电" ;
+VAL_ 3221225472 MotorDir2 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorDir1 1 "正转" 0 "反转" ;
+VAL_ 3221225472 MotorEnable2 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorEnable1 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 3221225472 MotorMode2 3 "测试模式" 2 "转速模式" 1 "转矩模式" 0 "停机模式" ;
+VAL_ 287 TestMode 5 "自动吸零" 4 "Ua、Ub、Uc模式" 3 "id、iq模式" 2 "Ud、Uq模式" 1 "Ualfa、Ubeta模式" 0 "普通模式" ;
+VAL_ 2362461768 MotorDischarge 1 "主动放电" 0 "不放电" ;
+VAL_ 2362461768 GearModeCmd 4 "D" 3 "N" 2 "R" 1 "P" 0 "未使用" ;
+VAL_ 2362461768 MotorEnableHV 1 "电机开始工作" 0 "电机停止工作" ;
+VAL_ 2362461768 EPT_Mode 6 "测试模式" 5 "转矩模式" 4 "转速模式" 3 "加力" 2 "发电" 1 "启动" 0 "停机" ;
+

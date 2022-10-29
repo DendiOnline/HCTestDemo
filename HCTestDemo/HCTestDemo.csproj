@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFD0B514-EB16-4B2A-B3B8-727F8E5EE738}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCTestDemo</RootNamespace>
+    <AssemblyName>HCTestDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dbc_demo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NModbus4">
+      <HintPath>Lib\NModbus4.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>Lib\NPOI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>Lib\NPOI.OOXML.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>Lib\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SunnyUI">
+      <HintPath>Lib\SunnyUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SunnyUI.Common">
+      <HintPath>Lib\SunnyUI.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TmctlAPINet">
+      <HintPath>Lib\TmctlAPINet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\BootLoadBinFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BootLoadBinFile.Designer.cs">
+      <DependentUpon>BootLoadBinFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RealTimeSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\WoSenPowerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\WoSenPowerControl.Designer.cs">
+      <DependentUpon>WoSenPowerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\HanSenPowerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HanSenPowerControl.Designer.cs">
+      <DependentUpon>HanSenPowerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AnalogKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AnalogKB.Designer.cs">
+      <DependentUpon>AnalogKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ExcelPathNameInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ExcelPathNameInit.Designer.cs">
+      <DependentUpon>ExcelPathNameInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ParameModifica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\ParameModifica.Designer.cs">
+      <DependentUpon>ParameModifica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_3kw_Pump.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_3kw_Pump.Designer.cs">
+      <DependentUpon>HC_3kw_Pump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_5kw_Fan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_5kw_Fan.Designer.cs">
+      <DependentUpon>HC_5kw_Fan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_L1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_L1.Designer.cs">
+      <DependentUpon>HC_L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LinearReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LinearReg.Designer.cs">
+      <DependentUpon>LinearReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoadFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoadFrm.Designer.cs">
+      <DependentUpon>LoadFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_2p5kw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_2p5kw.Designer.cs">
+      <DependentUpon>HC_2p5kw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_4p5_Fan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_4p5_Fan.Designer.cs">
+      <DependentUpon>HC_4p5_Fan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_M2A_Pump.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_M2A_Pump.Designer.cs">
+      <DependentUpon>HC_M2A_Pump.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_800w.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_800w.Designer.cs">
+      <DependentUpon>HC_800w.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HC_23KW_PowerSta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HC_23KW_PowerSta.Designer.cs">
+      <DependentUpon>HC_23KW_PowerSta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\NpoiHelper.cs" />
+    <Compile Include="PublicClass\connection.cs" />
+    <Compile Include="PublicClass\ControlCAN.cs" />
+    <Compile Include="PublicClass\IDBCManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicClass\LoadResourceDll.cs" />
+    <EmbeddedResource Include="Control\BootLoadBinFile.resx">
+      <DependentUpon>BootLoadBinFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RealTimeSample.resx">
+      <DependentUpon>RealTimeSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AnalogKB.resx">
+      <DependentUpon>AnalogKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ExcelPathNameInit.resx">
+      <DependentUpon>ExcelPathNameInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_3kw_Pump.resx">
+      <DependentUpon>HC_3kw_Pump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_5kw_Fan.resx">
+      <DependentUpon>HC_5kw_Fan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_L1.resx">
+      <DependentUpon>HC_L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LinearReg.resx">
+      <DependentUpon>LinearReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoadFrm.resx">
+      <DependentUpon>LoadFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\WoSenPowerControl.resx">
+      <DependentUpon>WoSenPowerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\HanSenPowerControl.resx">
+      <DependentUpon>HanSenPowerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ParameModifica.resx">
+      <DependentUpon>ParameModifica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_2p5kw.resx">
+      <DependentUpon>HC_2p5kw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_4p5_Fan.resx">
+      <DependentUpon>HC_4p5_Fan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_M2A_Pump.resx">
+      <DependentUpon>HC_M2A_Pump.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_800w.resx">
+      <DependentUpon>HC_800w.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HC_23KW_PowerSta.resx">
+      <DependentUpon>HC_23KW_PowerSta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbc_demo.ico" />
+    <EmbeddedResource Include="Lib\NModbus4.dll" />
+    <EmbeddedResource Include="Lib\SunnyUI.Common.dll" />
+    <EmbeddedResource Include="Lib\SunnyUI.dll" />
+    <EmbeddedResource Include="Lib\ICSharpCode.SharpZipLib.dll" />
+    <EmbeddedResource Include="Lib\NPOI.dll" />
+    <EmbeddedResource Include="Lib\NPOI.OOXML.dll" />
+    <EmbeddedResource Include="Lib\NPOI.OpenXml4Net.dll" />
+    <EmbeddedResource Include="Lib\NPOI.OpenXmlFormats.dll" />
+    <EmbeddedResource Include="Lib\TmctlAPINet.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

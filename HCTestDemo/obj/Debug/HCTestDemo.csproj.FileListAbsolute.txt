@@ -1,0 +1,137 @@
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Form1.resources
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+c:\users\king\documents\visual studio 2013\Projects\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+E:\VS 2013\Demo\5KW风扇\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\5KW风扇\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\5KW风扇\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+E:\VS 2013\Demo\通用\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+E:\VS 2013\Demo\5KW_FAN\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+E:\VS 2013\Demo\235W\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\235W\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\235W\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\235W_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csprojResolveAssemblyReference.cache
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.MsgFrm.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.Cache
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.WoSenPowerControl.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.WoSenPowerControl.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HanSenPowerControl.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ParameModifica.resources
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HanSenPowerControl.resources
+C:\Users\king\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ParameModifica.resources
+E:\VS 2013\Demo\PublicDemo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.BootLoadBinFile.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.BootLoadBinFile.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.WoSenPowerControl.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HanSenPowerControl.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ParameModifica.resources
+E:\VS 2013\Demo\3KW_pump\HCTestDemo\HCTestDemo\obj\Debug\WinFormsChartSamples.RealTimeSample.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.AssemblyReference.cache
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.BootLoadBinFile.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\WinFormsChartSamples.RealTimeSample.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_3kw_Pump.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_5kw_Fan.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_L1.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.LoadFrm.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.WoSenPowerControl.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HanSenPowerControl.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ParameModifica.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.cache
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.CoreCompileInputs.cache
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_2p5kw.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_4p5_Fan.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.LinearReg.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.AnalogKB.resources
+C:\Users\dendi.qian\Desktop\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_M2A_Pump.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe.config
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.exe
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\bin\Debug\HCTestDemo.pdb
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.AssemblyReference.cache
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.BootLoadBinFile.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\WinFormsChartSamples.RealTimeSample.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.AnalogKB.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ExcelPathNameInit.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_3kw_Pump.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_5kw_Fan.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_L1.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.LinearReg.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.LoadFrm.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.WoSenPowerControl.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HanSenPowerControl.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.ParameModifica.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_2p5kw.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_4p5_Fan.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_M2A_Pump.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.Properties.Resources.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.GenerateResource.cache
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.csproj.CoreCompileInputs.cache
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.exe
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.pdb
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_800w.resources
+D:\HC\WinformDemo\Demo\HCTestDemo\HCTestDemo\obj\Debug\HCTestDemo.HC_23KW_PowerSta.resources
