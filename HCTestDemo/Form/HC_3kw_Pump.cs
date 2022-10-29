@@ -541,8 +541,37 @@ namespace HCTestDemo
                 }
                 else  //结束保存动作
                 {
-                    
-                    EndSave();
+                    //保存间隔拉大，防止下次启动保存时，维持旧的间隔
+                    timerPeriod = 1000000;
+
+                    if (autoSaveFlg) //如果处于自动记录状态，执行这条
+                    {
+                        timer_msgSave.Dispose();
+                        uiLedWatch.Active = false;
+                        //结束写入，保存数据
+                        EndSave();
+                        UIPage ui = new UIPage();
+                        ui.ShowSuccessTip("保存完毕,共自动记录数据" + msgNum + "笔！");
+                        toolStrip_info.Text = " 自动记录完毕，共记录数据" + msgNum.ToString() + "笔!";
+                       
+                        msgProgressBar.Visible = false;
+                    }
+                    else //如果处于手动记录状态，执行这条
+                    {
+                        //结束写入，保存数据
+                        EndSave();
+                        UIPage ui = new UIPage();
+                        ui.ShowSuccessTip("保存完毕,共手动记录数据" + msgNum + "笔！");
+                        msgProgressBar.Visible = false;
+                        toolStrip_info.Text = " 手动记录完毕，共记录数据" + msgNum.ToString() + "笔";
+
+                    }
+                    uiLedWatch.Dispose();
+                    timer_SaveTime.Change(Timeout.Infinite, 100);
+                    timer_SaveTime.Dispose();
+                    //写入结束，更改按钮和提示
+                    bt_AutoSave.Symbol = 61674;
+                    bt_AutoSave.Text = "自动保存";
 
                 }
 
@@ -1495,20 +1524,7 @@ namespace HCTestDemo
             //防止多线程出现安全问题
             lock (locker)
             {
-                try
-                {
 
-                }
-                catch (Exception ex)
-                {
-                    //出现故障，第一时间先保存数据
-                    EndSave();
-
-                    //提示故障原因
-                    UIPage ui = new UIPage();   
-                    ui.ShowErrorTip(ex.Message);
-
-                }
                 row++;
                 #region 重新写sheet
                 ////如果超过固定行数，重新写入新的sheet
@@ -1642,37 +1658,6 @@ namespace HCTestDemo
         /// </summary>
         private void EndSave()
         {
-            //保存间隔拉大，防止下次启动保存时，维持旧的间隔
-            timerPeriod = 1000000;
-
-            if (autoSaveFlg) //如果处于自动记录状态，执行这条
-            {
-                timer_msgSave.Dispose();
-                uiLedWatch.Active = false;
-               
-                UIPage ui = new UIPage();
-                ui.ShowSuccessTip("保存完毕,共自动记录数据" + msgNum + "笔！");
-                toolStrip_info.Text = " 自动记录完毕，共记录数据" + msgNum.ToString() + "笔!";
-
-                msgProgressBar.Visible = false;
-            }
-            else //如果处于手动记录状态，执行这条
-            {
-           
-                UIPage ui = new UIPage();
-                ui.ShowSuccessTip("保存完毕,共手动记录数据" + msgNum + "笔！");
-                msgProgressBar.Visible = false;
-                toolStrip_info.Text = " 手动记录完毕，共记录数据" + msgNum.ToString() + "笔";
-
-            }
-            uiLedWatch.Dispose();
-            timer_SaveTime.Change(Timeout.Infinite, 100);
-            timer_SaveTime.Dispose();
-            //写入结束，更改按钮和提示
-            bt_AutoSave.Symbol = 61674;
-            bt_AutoSave.Text = "自动保存";
-
-            //结束写入，保存数据
             using (MemoryStream ms = new MemoryStream())
             {
                 using (FileStream fs = new FileStream(filePathName, FileMode.Create, FileAccess.Write))
@@ -1682,7 +1667,6 @@ namespace HCTestDemo
             }
             wkBook.Close();
             row = 0;
-
         }
 
 
