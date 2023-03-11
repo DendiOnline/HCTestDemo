@@ -60,10 +60,10 @@ namespace HCTestDemo
 
         private void bt_OpenSerial_Click(object sender, EventArgs e)
         {
-           
+
             if (cb_SerialNum.SelectedItem != null)
             {
- 
+
                 if (sp_Com.IsOpen)
                 {
                     sp_Com.Close();
@@ -82,7 +82,7 @@ namespace HCTestDemo
                     {
                         timer_msgSave.Change(Timeout.Infinite, 1000);
                         timer_msgSave.Dispose();
-                        
+
                     }
                     
                 }
